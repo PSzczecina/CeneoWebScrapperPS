@@ -1,5 +1,13 @@
 *{
     margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.id{
+    font-size: 25px;
+    color: goldenrod;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
 
 h1{
@@ -8,17 +16,45 @@ h1{
     background-image: conic-gradient(at 65% 30% ,azure 180deg, aqua 300deg, rgba(0,0,0,0));
     border-radius: 50%;
 }
+h2{
+    text-overflow: ellipsis;
+    font-size: 40px;
+    color: goldenrod;
+    height: 60px;
+    transition: 0.1s;
+}
+h2:hover{transition: 3s; letter-spacing: 40px; font-size: 60px;}
+
+
+label, input{
+    margin: 10px;
+    height: 25px;
+    display: inline;
+    transition: 0.2s;
+}
+input{background-color: goldenrod;}
+input:hover{
+    background-color: crimson;
+    color:white;
+    transition: 0.4s;
+}
+
 
 li{
+    font-size: 35px;
     list-style-type: none;
     text-align: left;
-    margin: 4px;
+    margin: 8px;
 }
 ul{
     margin-top: 20px;
 }
+a{text-decoration: none;
+transition: 0.2s;}
+
 a:hover{
-    font-weight: bold;
+    transition: 0.5s;
+    letter-spacing: 3px;
     background-image: radial-gradient(azure, rgba(0,0,0,0));
     color: darkgoldenrod;
 }
@@ -34,6 +70,7 @@ header{
     height: 100%;
     position: fixed;
     z-index: 1;
+    box-shadow: 3px 2px 5px darkgray;
 }
 section{
     font-size: 20px;
