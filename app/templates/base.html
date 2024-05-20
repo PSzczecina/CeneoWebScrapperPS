@@ -17,6 +17,11 @@
         </ul>
     </header>
     <section>
+        <h2>
+        {% block  title%}
+            bazowany tytuł
+        {% endblock title %}
+        </h2>
         {% block content %}
             <p>To jest plik bazowy.</p>
         {% endblock content %}

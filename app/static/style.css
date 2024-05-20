@@ -25,6 +25,29 @@ h2{
 }
 h2:hover{transition: 3s; letter-spacing: 40px; font-size: 60px;}
 
+@keyframes blad {
+    0%   {color:red; text-shadow: darkred 1px 2px;}
+    25%  {color:orange; text-shadow: darkgoldenrod 1px 2px;}
+    50%  {color:darkred; text-shadow: red 1px 2px;}
+    75%  {color:orange; text-shadow: darkgoldenrod 1px 2px;}
+    100% {color:red; text-shadow: darkred 1px 2px;}
+  }
+
+h3{
+    letter-spacing: 4px;
+    animation-name: blad;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    color: red;
+    text-shadow: darkred 1px 2px;
+    margin-bottom: 10px;
+}
+
+/*h3:hover{
+    animation-name: blad;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}*/
 
 label, input{
     margin: 10px;
