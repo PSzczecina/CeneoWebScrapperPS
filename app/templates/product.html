@@ -1,9 +1,21 @@
 {% extends "base.html" %}
 {% block title %}
-    Opinie o Produkcie
+    Opinie o Produkcie {{product_id}}
 {% endblock title %}
 
 
 {% block content %}
-    <p>To jest Strona z opiniami o produkcie {{product_id}}.</p>
+    {% for opinion in product %}
+    <div class="product_opinion">
+        {% if not opinion["recommendation"] %}
+        <h5>{{opinion["author"]}} nie wyraził opinii</h5>
+        {% elif opinion["recommendation"] == "Polecam" %}
+        <h5 class="recommended">{{opinion["author"]}} Poleca</h5>
+        {% else %}
+        <h5 class="not_recommended">{{opinion["author"]}} Nie poleca</h5>
+        {% endif %}
+        <p>{{opinion["content"]}}</p>
+    </div>
+    {% endfor %}
+   
 {% endblock content %}

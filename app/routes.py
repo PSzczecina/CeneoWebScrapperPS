@@ -74,7 +74,7 @@ def products():
     products_list = [filename.split(".")[0] for filename in os.listdir("app/data/opinions")]
     products = []
     for products_id in products_list:
-        with open(f"app/data/opinions/{products_id}.json", "r", encoding="UTF-8") as ojf:
+        with open(f"app/data/products/{products_id}.json", "r", encoding="UTF-8") as ojf:
             products.append(json.load(ojf))
     return render_template("products.html", products=products)
 
@@ -84,7 +84,10 @@ def author():
 
 @app.route('/product/<product_id>')
 def product(product_id):
-    return render_template("product.html", product_id=product_id)
+    product = []
+    with open(f"app/data/opinions/{product_id}.json", "r", encoding="UTF-8") as ojf:
+            product = json.load(ojf)
+    return render_template("product.html", product_id=product_id, product = product)
 
 @app.route('/product/download_json/<product_id>')
 def download_json(product_id):

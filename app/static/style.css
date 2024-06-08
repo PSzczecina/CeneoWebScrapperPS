@@ -2,6 +2,7 @@
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+body {background-color: aquamarine;}
 
 .id{
     font-size: 25px;
@@ -72,7 +73,7 @@ li{
 ul{
     margin-top: 20px;
 }
-a{text-decoration: none;
+a{text-decoration: none; white-space: nowrap;
 transition: 0.2s;}
 
 a:hover{
@@ -101,8 +102,9 @@ section{
     padding-left: 20px;
     padding-top: 20px;
     margin-left: 20vw;
-    height: 95vh;
+    min-height: 90vh;
     background-color: aquamarine;
+    margin-bottom: 5vh;
 }
 footer{
     background-color: darkgoldenrod;
@@ -114,3 +116,12 @@ footer{
     padding-left: 50px;
     margin-left: 20vw;
 }
+
+.product_opinion{
+    border-bottom: 2px solid darkgoldenrod;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.recommended{color: green;}
+.not_recommended{color: red;}
